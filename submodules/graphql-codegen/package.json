@@ -1,0 +1,19 @@
+{
+  "name": "@eduone/graphql-codegen",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "从后端 GraphQL SDL 生成 TypeScript axios 客户端",
+  "bin": {
+    "graphql-codegen": "./src/index.mjs"
+  },
+  "scripts": {
+    "codegen": "node src/index.mjs --config ../../graphql-codegen.config.mjs"
+  },
+  "dependencies": {
+    "graphql": "^16.11.0"
+  },
+  "engines": {
+    "node": "^22.18.0 || >=24.12.0"
+  }
+}

@@ -1,0 +1,9 @@
+extend type Mutation {
+    """
+    创建示例
+
+    @param request 创建参数
+    @return 是否成功
+    """
+    createSample(request: CreateSampleRequest!): BooleanBusinessResponse @commonBusinessResponse(for: "Boolean")
+}

@@ -1,0 +1,25 @@
+extend type Query {
+    """
+    查询示例
+
+    @param request 查询条件
+    @return 示例列表
+    @see SampleResponse
+    @see io.example.SampleResponse
+    @see io.example.UnknownThing
+    @see UnknownThing
+    @see 参见 {@link SampleStatus}
+    """
+    listSample(request: SampleRequest): [SampleResponse]
+    """
+    分页查询示例
+
+    @param page 分页参数
+    @return 分页结果
+    """
+    pageSample(page: PageRequest): SampleResponseDataPage @page(for: "SampleResponse")
+    """
+    查询开关
+    """
+    requireFlag: Boolean
+}

@@ -1,0 +1,56 @@
+type Query
+type Mutation
+directive @commonBusinessResponse(for: String!) on FIELD_DEFINITION
+directive @page(for: String!) on FIELD_DEFINITION
+directive @type(value: String!) on OBJECT | INPUT_OBJECT | ENUM
+scalar Boolean
+scalar DateTime
+scalar Int
+scalar Long
+scalar String
+
+"""示例响应"""
+type SampleResponse @type(value: "io.example.SampleResponse") {
+    """主键"""
+    id: String!
+    """标签"""
+    tags: [String!]!
+    """别名"""
+    aliases: [String]
+    """状态"""
+    status: SampleStatus
+    """创建时间"""
+    createTime: DateTime
+}
+
+"""示例状态枚举"""
+enum SampleStatus @type(value: "io.example.SampleStatus") {
+    """启用"""
+    ENABLED
+    """禁用"""
+    DISABLED
+}
+
+"""分页请求"""
+input PageRequest @type(value: "io.example.PageRequest") {
+    """页码"""
+    pageNo: Long
+    """每页数量"""
+    pageSize: Long
+}
+
+"""示例查询条件"""
+input SampleRequest @type(value: "io.example.SampleRequest") {
+    """关键字"""
+    keyword: String
+    """状态集合"""
+    statusList: [SampleStatus!]
+}
+
+"""示例创建参数"""
+input CreateSampleRequest @type(value: "io.example.CreateSampleRequest") {
+    """名称"""
+    name: String!
+    """备注"""
+    remark: String
+}
