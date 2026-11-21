@@ -1,0 +1,20 @@
+query pageBusinessDictionary($page: PageRequest, $request: BusinessDictionaryRequest, $sortList: [BusinessDictionarySortRequest]) {
+  pageBusinessDictionary(page: $page, request: $request, sortList: $sortList) {
+    currentPageData {
+      id
+      type
+      code
+      name
+      parentId
+      status
+      sort
+      updateUserId
+      updateTime
+      createUserId
+      createTime
+    }
+    totalSize
+    pageNo
+    pageSize
+  }
+}

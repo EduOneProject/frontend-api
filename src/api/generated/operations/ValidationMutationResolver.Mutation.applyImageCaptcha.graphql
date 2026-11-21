@@ -1,0 +1,10 @@
+mutation applyImageCaptcha($request: ApplyImageCaptchaRequest) {
+  applyImageCaptcha(request: $request) {
+    data {
+      imageBase64
+      token
+    }
+    code
+    message
+  }
+}

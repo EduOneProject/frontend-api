@@ -1,0 +1,11 @@
+query listBusinessDictionaryType($request: BusinessDictionaryTypeRequest, $sortList: [BusinessDictionaryTypeSortRequest]) {
+  listBusinessDictionaryType(request: $request, sortList: $sortList) {
+    type
+    name
+    desc
+    updateUserId
+    updateTime
+    createUserId
+    createTime
+  }
+}

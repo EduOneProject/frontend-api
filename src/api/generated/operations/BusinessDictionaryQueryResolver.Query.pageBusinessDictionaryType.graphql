@@ -1,0 +1,16 @@
+query pageBusinessDictionaryType($page: PageRequest, $request: BusinessDictionaryTypeRequest, $sortList: [BusinessDictionaryTypeSortRequest]) {
+  pageBusinessDictionaryType(page: $page, request: $request, sortList: $sortList) {
+    currentPageData {
+      type
+      name
+      desc
+      updateUserId
+      updateTime
+      createUserId
+      createTime
+    }
+    totalSize
+    pageNo
+    pageSize
+  }
+}

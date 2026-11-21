@@ -1,0 +1,7 @@
+mutation validateImageCaptcha($request: ImageCaptchaValidRequest) {
+  validateImageCaptcha(request: $request) {
+    data
+    code
+    message
+  }
+}

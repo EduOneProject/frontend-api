@@ -1,0 +1,3 @@
+query requireVerificationContext($type: String) {
+  requireVerificationContext(type: $type)
+}

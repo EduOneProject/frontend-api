@@ -1,0 +1,10 @@
+mutation rotateAccessToken($refreshToken: String) {
+  rotateAccessToken(refreshToken: $refreshToken) {
+    data {
+      accessToken
+      refreshToken
+    }
+    code
+    message
+  }
+}

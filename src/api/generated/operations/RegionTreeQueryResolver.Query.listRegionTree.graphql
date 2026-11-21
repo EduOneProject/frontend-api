@@ -1,0 +1,13 @@
+query listRegionTree($request: RegionTreeQueryRequest) {
+  listRegionTree(request: $request) {
+    id
+    code
+    parentId
+    parentCode
+    path
+    level
+    name
+    sort
+    status
+  }
+}
