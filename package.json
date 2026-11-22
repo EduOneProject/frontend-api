@@ -12,6 +12,7 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
+    "format": "prettier --write --experimental-cli src/",
     "codegen": "node submodules/graphql-codegen/src/index.mjs --config graphql-codegen.config.mjs",
     "codegen:check": "node submodules/graphql-codegen/src/index.mjs --config graphql-codegen.config.mjs --check",
     "test:codegen": "npm run codegen && node --test submodules/graphql-codegen/test/unit submodules/graphql-codegen/test/golden submodules/graphql-codegen/test/integration submodules/graphql-codegen/test/type/type-check.test.mjs"
@@ -27,6 +28,7 @@
     "@vitejs/plugin-vue": "^6.0.8",
     "@vue/tsconfig": "^0.9.1",
     "npm-run-all2": "^9.0.3",
+    "prettier": "3.9.6",
     "typescript": "~6.0.0",
     "vite": "^8.2.2",
     "vite-plugin-vue-devtools": "^8.2.1",
