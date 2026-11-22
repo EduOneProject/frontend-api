@@ -1,7 +1,7 @@
 import {fileURLToPath, URL} from 'node:url'
 import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path'
+import {resolve} from 'path'
 
 export default defineConfig({
     plugins: [
@@ -11,7 +11,7 @@ export default defineConfig({
         lib: {
             name: "FrontendApi",
             fileName: (format) => `frontend-api.${format}.js`,
-            entry: resolve(__dirname, 'src/main.ts')
+            entry: resolve(__dirname, 'src/index.ts')
         }
     },
     resolve: {

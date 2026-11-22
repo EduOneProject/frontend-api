@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {createApi} from '@/api/generated'
+import {createApi} from './api/generated'
 
 const http = axios.create({
     baseURL: '/api',
